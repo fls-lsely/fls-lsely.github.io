@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-11T09:58:37.497Z</updated>
+  <updated>2022-12-11T09:58:41.980Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于我</title>
-    <link href="http://example.com/2022/12/11/index/"/>
-    <id>http://example.com/2022/12/11/index/</id>
-    <published>2022-12-11T07:57:34.000Z</published>
-    <updated>2022-12-11T09:58:37.497Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;你进来干什么？&lt;br&gt;想了解一下我？好吧.&lt;/p&gt;
-&lt;p&gt;性别：男&lt;br&gt;年龄：X2 岁&lt;br&gt;体重：X5 kg&lt;br&gt;身高：173 cm&lt;br&gt;主力语言：C++,Java&lt;br&gt;身份：程序员 * 学生&lt;br&gt;爱好：写应用和打游戏&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Java 学习笔记</title>
