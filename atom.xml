@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lselyの博客</title>
+  
+  <subtitle>勤勤恳恳写代码，慵慵懒懒摆摆烂</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-12-11T08:16:28.599Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>lsely</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我</title>
+    <link href="http://example.com/2022/12/11/index/"/>
+    <id>http://example.com/2022/12/11/index/</id>
+    <published>2022-12-11T07:57:34.000Z</published>
+    <updated>2022-12-11T08:16:28.599Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java 学习笔记</title>
+    <link href="http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/"/>
+    <id>http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/</id>
+    <published>2022-12-11T07:57:34.000Z</published>
+    <updated>2022-12-11T08:47:59.138Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Java基础语法（面向过程）&quot;&gt;&lt;a href=&quot;#Java基础语法（面向过程）&quot; class=&quot;headerlink&quot; title=&quot;Java基础语法（面向过程）&quot;&gt;&lt;/a&gt;Java基础语法（面向过程）&lt;/h1&gt;&lt;p&gt;在学习面向对象之前，我们需要了解面向过程的编程思维，如果你学习过C语言和Python就会很轻松！&lt;/p&gt;
+&lt;h2 id=&quot;变量和关键字&quot;&gt;&lt;a href=&quot;#变量和关键字&quot; class=&quot;headerlink&quot; title=&quot;变量和关键字&quot;&gt;&lt;/a&gt;&lt;strong&gt;变量和关键字&lt;/strong&gt;&lt;/h2&gt;&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;变量就是一个可变的量，例如定义一个int类型的变量（int就是整数类型）：&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
