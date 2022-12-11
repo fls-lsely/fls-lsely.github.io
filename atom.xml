@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-11T08:16:28.599Z</updated>
+  <updated>2022-12-11T09:58:37.497Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="http://example.com/2022/12/11/index/"/>
     <id>http://example.com/2022/12/11/index/</id>
     <published>2022-12-11T07:57:34.000Z</published>
-    <updated>2022-12-11T08:16:28.599Z</updated>
+    <updated>2022-12-11T09:58:37.497Z</updated>
     
+    
+      
+      
+    <summary type="html">&lt;p&gt;你进来干什么？&lt;br&gt;想了解一下我？好吧.&lt;/p&gt;
+&lt;p&gt;性别：男&lt;br&gt;年龄：X2 岁&lt;br&gt;体重：X5 kg&lt;br&gt;身高：173 cm&lt;br&gt;主力语言：C++,Java&lt;br&gt;身份：程序员 * 学生&lt;br&gt;爱好：写应用和打游戏&lt;/p&gt;
+</summary>
+      
     
     
     
@@ -34,11 +41,10 @@
     <link href="http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/"/>
     <id>http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/</id>
     <published>2022-12-11T07:57:34.000Z</published>
-    <updated>2022-12-11T08:47:59.138Z</updated>
+    <updated>2022-12-11T09:58:41.980Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Java基础语法（面向过程）&quot;&gt;&lt;a href=&quot;#Java基础语法（面向过程）&quot; class=&quot;headerlink&quot; title=&quot;Java基础语法（面向过程）&quot;&gt;&lt;/a&gt;Java基础语法（面向过程）&lt;/h1&gt;&lt;p&gt;在学习面向对象之前，我们需要了解面向过程的编程思维，如果你学习过C语言和Python就会很轻松！&lt;/p&gt;
-&lt;h2 id=&quot;变量和关键字&quot;&gt;&lt;a href=&quot;#变量和关键字&quot; class=&quot;headerlink&quot; title=&quot;变量和关键字&quot;&gt;&lt;/a&gt;&lt;strong&gt;变量和关键字&lt;/strong&gt;&lt;/h2&gt;&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;变量就是一个可变的量，例如定义一个int类型的变量（int就是整数类型）：&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Java基础语法（面向过程）&quot;&gt;&lt;a href=&quot;#Java基础语法（面向过程）&quot; class=&quot;headerlink&quot; title=&quot;Java基础语法（面向过程）&quot;&gt;&lt;/a&gt;Java基础语法（面向过程）&lt;/h1&gt;&lt;p&gt;在学习面向对象之前，我们需要了解面向过程的编程思维，如果你学习过C语言和Python就会很轻松！&lt;/p&gt;</summary>
     
     
     
