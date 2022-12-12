@@ -20,20 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。">
+    <meta name="description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。 安装Tesseract-OCR和pytesseract首先我们要安装tesseract，这两个网址任选其一即可： Home ·">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python+Tesseract实现图片文字识别">
 <meta property="og:url" content="http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/index.html">
 <meta property="og:site_name" content="lselyの博客">
-<meta property="og:description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。">
+<meta property="og:description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。 安装Tesseract-OCR和pytesseract首先我们要安装tesseract，这两个网址任选其一即可： Home ·">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/15dd429103424c17b5fe85ae1520cad4.png#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/95ac52fa466b4b0f895192d9d1919e2d.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0ed63f8f6c334377b5626f1ba9311c15.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/065bef0c830146759a57db2bc059d64b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/9df01b5aaef04b3f8810340178f0fcdf.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a724c137b8bf4ff7add2636dd4d0d324.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6af7bcaefe7d4ed0975d79d42e1ddcb7.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/467da2d213a546aea5c0ee3969b84147.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/62c57fdb7128411eb81accfeb1e286bf.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7979035db073401da78813f5e15af752.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2974d89fca00404b840fead44a58aa5b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/220283b3a435480193f52034e39a704d.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/617f8b7b0b3a4661b16667c7cc6e1b71.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/7461946263b24a9cb8cb9231092a92e2.png#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/df96ff396b654f8cab20095e2d2d7e64.png">
 <meta property="article:published_time" content="2022-12-12T02:44:03.000Z">
-<meta property="article:modified_time" content="2022-12-12T02:50:29.488Z">
+<meta property="article:modified_time" content="2022-12-12T03:55:54.906Z">
 <meta property="article:author" content="lsely">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -123,7 +133,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFOCR%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是OCR？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Tesseract-OCR%E5%92%8Cpytesseract"><span class="nav-number">2.</span> <span class="nav-text">安装Tesseract-OCR和pytesseract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E6%96%87%E5%AD%97"><span class="nav-number">3.</span> <span class="nav-text">实现自动识别文字</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFOCR%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是OCR？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Tesseract-OCR%E5%92%8Cpytesseract"><span class="nav-number">2.</span> <span class="nav-text">安装Tesseract-OCR和pytesseract</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">验证安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E6%96%87%E5%AD%97"><span class="nav-number">3.</span> <span class="nav-text">实现自动识别文字</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -211,7 +221,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-12-12 10:44:03 / 修改时间：10:50:29" itemprop="dateCreated datePublished" datetime="2022-12-12T10:44:03+08:00">2022-12-12</time>
+      <time title="创建时间：2022-12-12 10:44:03 / 修改时间：11:55:54" itemprop="dateCreated datePublished" datetime="2022-12-12T10:44:03+08:00">2022-12-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,17 +248,18 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="什么是OCR？"><a href="#什么是OCR？" class="headerlink" title="什么是OCR？"></a>什么是OCR？</h2><p>OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。</p>
-<span id="more"></span>
-<h2 id="安装Tesseract-OCR和pytesseract"><a href="#安装Tesseract-OCR和pytesseract" class="headerlink" title="安装Tesseract-OCR和pytesseract"></a>安装Tesseract-OCR和pytesseract</h2><p>首先我们要安装tesseract，到这个网址下载：</p>
+<h2 id="安装Tesseract-OCR和pytesseract"><a href="#安装Tesseract-OCR和pytesseract" class="headerlink" title="安装Tesseract-OCR和pytesseract"></a>安装Tesseract-OCR和pytesseract</h2><p>首先我们要安装tesseract，这两个网址任选其一即可：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/UB-Mannheim/tesseract/wiki">Home · UB-Mannheim/tesseract Wiki (github.com)</a></p>
-<p><img src="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center" alt="在这里插入图片描述"></p>
-<p>自己按照电脑的位数选择安装包,下载下来。</p>
-<p>下载下来后，打开安装包。</p>
-<p>选择语言，没有中文，只好选英文。<br><img src="https://img-blog.csdnimg.cn/15dd429103424c17b5fe85ae1520cad4.png#pic_center" alt="在这里插入图片描述"></p>
-<p>然后一直next，但是注意！在安装语言时这个Additional lauguage data千万不要全选，要不然下载过程特别慢，如果需要的话，只安装里面的 Chinese组件就行了。<br><img src="https://img-blog.csdnimg.cn/95ac52fa466b4b0f895192d9d1919e2d.png#pic_center" alt="在这里插入图片描述"></p>
-<p>接下来就比较简单了。</p>
-<p>安装完成后我们还得添加环境变量，打开自己安装tesseract的文件夹，复制路径，在右键此电脑，选择属性，打开高级系统设置，打开环境变量，打开用户变量的Path，新建变量，把复制的路径粘贴进去，点确定就行了，可以通过cmd输入 tesseract -v 再回车，如果出现了tesseract的版本信息就说明配置成功了。</p>
-<p>然后为了在python中使用tesseract，我们需要安装pytesseract，直接在cmd中用pip安装就好了：</p>
+<p><img src="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center" alt="在这里插入图片描述"><br><a target="_blank" rel="noopener" href="https://digi.bib.uni-mannheim.de/tesseract/">Index of /tesseract</a><br><img src="https://img-blog.csdnimg.cn/0ed63f8f6c334377b5626f1ba9311c15.png" alt="在这里插入图片描述"><br>解释一下这些名称的含义，我们以最新版本v5.20举例：<br><img src="https://img-blog.csdnimg.cn/065bef0c830146759a57db2bc059d64b.png" alt="在这里插入图片描述"><br>w64的w是指Windows系统，64则是指电脑CPU采用64位处理技术，setup就是安装包，后面的版本号很好理解了。但是如果版本号后面跟上alpha，dev的话就是指这个安装包为开发版或是预览版，大多数程序的开发板大多不稳定，所以这里我们就是用最新的v5.2.0稳定版安装包。</p>
+<p>点击下载，下载完成后运行安装程序：<br><img src="https://img-blog.csdnimg.cn/9df01b5aaef04b3f8810340178f0fcdf.png" alt="在这里插入图片描述"><br>选择语言，没有中文，只好选英文。<br><img src="https://img-blog.csdnimg.cn/a724c137b8bf4ff7add2636dd4d0d324.png" alt="在这里插入图片描述"></p>
+<p>然后一直next，但是注意！在选择安装语言时这个Additional lauguage data千万不要全选，要不然下载过程特别慢，如果需要的话，只安装里面的 Chinese与English组件就行了。<br><img src="https://img-blog.csdnimg.cn/6af7bcaefe7d4ed0975d79d42e1ddcb7.png" alt="在这里插入图片描述"></p>
+<p>接下来就比较简单了，直接next，等待安装完成即可。</p>
+<p>安装完成后我们还得添加环境变量，打开自己安装tesseract的文件夹，复制路径：<br><img src="https://img-blog.csdnimg.cn/467da2d213a546aea5c0ee3969b84147.png" alt="在这里插入图片描述"></p>
+<p>回到桌面，右键此电脑：<img src="https://img-blog.csdnimg.cn/62c57fdb7128411eb81accfeb1e286bf.png" alt="在这里插入图片描述"><br>选择属性，点击高级系统设置，环境变量：<br><img src="https://img-blog.csdnimg.cn/7979035db073401da78813f5e15af752.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2974d89fca00404b840fead44a58aa5b.png" alt="在这里插入图片描述"></p>
+<p>打开环境变量，双击用户变量的Path，新建变量：<br><img src="https://img-blog.csdnimg.cn/220283b3a435480193f52034e39a704d.png" alt="在这里插入图片描述"></p>
+<p>把复制的路径粘贴进去，点确定，我们的环境配置就完成了。</p>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><p>win+r，输入cmd，输入 tesseract -v 再回车，如果出现了tesseract的版本信息就说明配置成功了。<br><img src="https://img-blog.csdnimg.cn/617f8b7b0b3a4661b16667c7cc6e1b71.png" alt="在这里插入图片描述"></p>
+<p>为了在python中使用tesseract，我们需要安装pytesseract，直接在cmd中用pip安装就好了：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytesseract</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://img-blog.csdnimg.cn/7461946263b24a9cb8cb9231092a92e2.png#pic_center" alt="在这里插入图片描述"></p>
@@ -256,8 +267,9 @@
 <h2 id="实现自动识别文字"><a href="#实现自动识别文字" class="headerlink" title="实现自动识别文字"></a>实现自动识别文字</h2><p>打开python编辑器，把这段代码复制进去：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">pytesseract.pytesseract.tesseract_cmd = <span class="string">&#x27;D://Tesseract-OCR//tesseract.exe&#x27;</span>  <span class="comment"># 替换成你自己的tesseract安装路径</span></span><br><span class="line"></span><br><span class="line">text = pytesseract.image_to_string(Image.<span class="built_in">open</span>(<span class="string">&#x27;D://input.png&#x27;</span>))	<span class="comment"># 替换成要识别的图片路径</span></span><br><span class="line"><span class="built_in">print</span>(text)</span><br></pre></td></tr></table></figure>
 
-<p>这是我要识别的图片：<br><img src="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center" alt="在这里插入图片描述"></p>
-<p>运行后输出为 Hello world ，识别率很高。</p>
+<p>用windows自带画图随便做个图：<br><img src="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center" alt="在这里插入图片描述"></p>
+<p>运行输出为 Hello world ，完美。</p>
+<p><img src="https://img-blog.csdnimg.cn/df96ff396b654f8cab20095e2d2d7e64.png" alt="在这里插入图片描述"></p>
 <p>怎么样，好玩吧？不仅这样，tesseract还可以识别中文！只不过得安装相应的库，这是下载链接：<br>    <a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata">https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata</a><br>下载下来中文训练包后，把包放到tessdata中就可以识别中文了。</p>
 
     </div>
