@@ -20,33 +20,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
+    <meta name="description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2分钟速看Cookie">
-<meta property="og:url" content="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/index.html">
+<meta property="og:title" content="Python+Tesseract实现图片文字识别">
+<meta property="og:url" content="http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/index.html">
 <meta property="og:site_name" content="lselyの博客">
-<meta property="og:description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
+<meta property="og:description" content="什么是OCR？OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/267b6c72e15348f79c1443d47512f940.png#pic_center">
-<meta property="article:published_time" content="2022-12-11T14:02:46.000Z">
-<meta property="article:modified_time" content="2022-12-12T00:46:53.309Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/15dd429103424c17b5fe85ae1520cad4.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/95ac52fa466b4b0f895192d9d1919e2d.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7461946263b24a9cb8cb9231092a92e2.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center">
+<meta property="article:published_time" content="2022-12-12T02:44:03.000Z">
+<meta property="article:modified_time" content="2022-12-12T02:50:29.488Z">
 <meta property="article:author" content="lsely">
-<meta property="article:tag" content="Web">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="小知识">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center">
 
 
-<link rel="canonical" href="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/">
+<link rel="canonical" href="http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/","path":"2022/12/11/2分钟速看Cookie/","title":"2分钟速看Cookie"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/","path":"2022/12/12/Python-Tesseract实现图片文字识别/","title":"Python+Tesseract实现图片文字识别"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>2分钟速看Cookie | lselyの博客</title>
+<title>Python+Tesseract实现图片文字识别 | lselyの博客</title>
   
 
 
@@ -122,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Cookie是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E7%9A%84%E5%8F%91%E9%80%81%E6%9C%BA%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">Cookie的发送机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">Cookie的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFOCR%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是OCR？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Tesseract-OCR%E5%92%8Cpytesseract"><span class="nav-number">2.</span> <span class="nav-text">安装Tesseract-OCR和pytesseract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E6%96%87%E5%AD%97"><span class="nav-number">3.</span> <span class="nav-text">实现自动识别文字</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,7 +181,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/v2-4cfc15fe7744502c6102bf2695d828af_xl.jpg">
@@ -193,12 +194,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="2分钟速看Cookie | lselyの博客">
+      <meta itemprop="name" content="Python+Tesseract实现图片文字识别 | lselyの博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          2分钟速看Cookie
+          Python+Tesseract实现图片文字识别
         </h1>
 
         <div class="post-meta-container">
@@ -208,15 +209,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-12-11 22:02:46" itemprop="dateCreated datePublished" datetime="2022-12-11T22:02:46+08:00">2022-12-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-12 08:46:53" itemprop="dateModified" datetime="2022-12-12T08:46:53+08:00">2022-12-12</time>
+      <time title="创建时间：2022-12-12 10:44:03 / 修改时间：10:50:29" itemprop="dateCreated datePublished" datetime="2022-12-12T10:44:03+08:00">2022-12-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -224,11 +219,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+          <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+          <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
         </span>
     </span>
 
@@ -242,20 +237,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><em>此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。</em></p>
-<h2 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h2><p>Cookie , 在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/cookie/1119">百度百科中的介绍</a>是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了，这个过程也就是登录。</p>
+        <h2 id="什么是OCR？"><a href="#什么是OCR？" class="headerlink" title="什么是OCR？"></a>什么是OCR？</h2><p>OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。</p>
 <span id="more"></span>
+<h2 id="安装Tesseract-OCR和pytesseract"><a href="#安装Tesseract-OCR和pytesseract" class="headerlink" title="安装Tesseract-OCR和pytesseract"></a>安装Tesseract-OCR和pytesseract</h2><p>首先我们要安装tesseract，到这个网址下载：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/UB-Mannheim/tesseract/wiki">Home · UB-Mannheim/tesseract Wiki (github.com)</a></p>
+<p><img src="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center" alt="在这里插入图片描述"></p>
+<p>自己按照电脑的位数选择安装包,下载下来。</p>
+<p>下载下来后，打开安装包。</p>
+<p>选择语言，没有中文，只好选英文。<br><img src="https://img-blog.csdnimg.cn/15dd429103424c17b5fe85ae1520cad4.png#pic_center" alt="在这里插入图片描述"></p>
+<p>然后一直next，但是注意！在安装语言时这个Additional lauguage data千万不要全选，要不然下载过程特别慢，如果需要的话，只安装里面的 Chinese组件就行了。<br><img src="https://img-blog.csdnimg.cn/95ac52fa466b4b0f895192d9d1919e2d.png#pic_center" alt="在这里插入图片描述"></p>
+<p>接下来就比较简单了。</p>
+<p>安装完成后我们还得添加环境变量，打开自己安装tesseract的文件夹，复制路径，在右键此电脑，选择属性，打开高级系统设置，打开环境变量，打开用户变量的Path，新建变量，把复制的路径粘贴进去，点确定就行了，可以通过cmd输入 tesseract -v 再回车，如果出现了tesseract的版本信息就说明配置成功了。</p>
+<p>然后为了在python中使用tesseract，我们需要安装pytesseract，直接在cmd中用pip安装就好了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytesseract</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="Cookie的发送机制"><a href="#Cookie的发送机制" class="headerlink" title="Cookie的发送机制"></a>Cookie的发送机制</h2><p>总体来说，每当我们第一次登录一个网站时，Web服务器就会发送一个Cookie到用户本地，在以后的登录中，用户本地的Cookie就会发送到Web服务器，从而验证自己的账户，用一张图来表示：<br><img src="https://img-blog.csdnimg.cn/267b6c72e15348f79c1443d47512f940.png#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="Cookie的组成"><a href="#Cookie的组成" class="headerlink" title="Cookie的组成"></a>Cookie的组成</h2><p>Cookie本质上还是一个文本数据，一般这个数据是经过加密的，由名称，值，还有几个用于控制Cookie使用范围或有效时间等量组成。</p>
-<ul>
-<li>名称和值 Name/Value：Cookie的名称以及值。</li>
-<li>有效期 Expires：Cookie的有效期。Expriers分为两种存储方式：会话性与持久性。会话性Cookie，保存在用户的内存中，会在推出浏览器时清空；而持久性Cookie会保存在用户的本地硬盘中，直至用户退出登录时才会失效 。说人话就是一个临时存储，一个长久存储。</li>
-<li>使用范围 Domain：Cookie的使用于访问范围。</li>
-<li>安全性 Secure：Cookie是否使用Https协议。</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Cookie是网站用于识别用户身份，保存在用户本地上的数据（经过加密），由用户本地暂时或长久保存的文本数据，一般由名称，值，有效期，使用范围等组成。</p>
+<p><img src="https://img-blog.csdnimg.cn/7461946263b24a9cb8cb9231092a92e2.png#pic_center" alt="在这里插入图片描述"></p>
+<p>（无视里面的黄色字体，是我电脑的问题，对安装什么的没有影响）</p>
+<h2 id="实现自动识别文字"><a href="#实现自动识别文字" class="headerlink" title="实现自动识别文字"></a>实现自动识别文字</h2><p>打开python编辑器，把这段代码复制进去：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">pytesseract.pytesseract.tesseract_cmd = <span class="string">&#x27;D://Tesseract-OCR//tesseract.exe&#x27;</span>  <span class="comment"># 替换成你自己的tesseract安装路径</span></span><br><span class="line"></span><br><span class="line">text = pytesseract.image_to_string(Image.<span class="built_in">open</span>(<span class="string">&#x27;D://input.png&#x27;</span>))	<span class="comment"># 替换成要识别的图片路径</span></span><br><span class="line"><span class="built_in">print</span>(text)</span><br></pre></td></tr></table></figure>
+
+<p>这是我要识别的图片：<br><img src="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center" alt="在这里插入图片描述"></p>
+<p>运行后输出为 Hello world ，识别率很高。</p>
+<p>怎么样，好玩吧？不仅这样，tesseract还可以识别中文！只不过得安装相应的库，这是下载链接：<br>    <a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata">https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata</a><br>下载下来中文训练包后，把包放到tessdata中就可以识别中文了。</p>
 
     </div>
 
@@ -265,23 +268,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Web/" rel="tag"># Web</a>
-              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
-              <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" rel="tag"># 小知识</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="prev" title="上千字干货带你深入了解C/C++动态规划">
-                  <i class="fa fa-chevron-left"></i> 上千字干货带你深入了解C/C++动态规划
+                <a href="/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/" rel="prev" title="2分钟速看Cookie">
+                  <i class="fa fa-chevron-left"></i> 2分钟速看Cookie
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" rel="next" title="Python+Tesseract实现图片文字识别">
-                  Python+Tesseract实现图片文字识别 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

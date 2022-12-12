@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-12T00:46:53.309Z</updated>
+  <updated>2022-12-12T02:50:29.488Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python+Tesseract实现图片文字识别</title>
+    <link href="http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
+    <id>http://example.com/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</id>
+    <published>2022-12-12T02:44:03.000Z</published>
+    <updated>2022-12-12T02:50:29.488Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是OCR？&quot;&gt;&lt;a href=&quot;#什么是OCR？&quot; class=&quot;headerlink&quot; title=&quot;什么是OCR？&quot;&gt;&lt;/a&gt;什么是OCR？&lt;/h2&gt;&lt;p&gt;OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="后端" scheme="http://example.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/%E5%90%8E%E7%AB%AF/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>2分钟速看Cookie</title>
@@ -47,7 +68,7 @@
     <link href="http://example.com/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     <id>http://example.com/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
     <published>2022-12-11T13:58:52.000Z</published>
-    <updated>2022-12-12T00:47:53.190Z</updated>
+    <updated>2022-12-12T01:23:23.581Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;提醒&lt;/strong&gt;：本文需读者具有以下C/C++基础：&lt;/p&gt;
@@ -59,11 +80,11 @@
     
     
     
-    <category term="C/C++" scheme="http://example.com/categories/C-C/"/>
+    <category term="后端" scheme="http://example.com/categories/%E5%90%8E%E7%AB%AF/"/>
     
-    <category term="后端" scheme="http://example.com/categories/C-C/%E5%90%8E%E7%AB%AF/"/>
+    <category term="C/C++" scheme="http://example.com/categories/%E5%90%8E%E7%AB%AF/C-C/"/>
     
-    <category term="算法" scheme="http://example.com/categories/C-C/%E5%90%8E%E7%AB%AF/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://example.com/categories/%E5%90%8E%E7%AB%AF/C-C/%E7%AE%97%E6%B3%95/"/>
     
     
     <category term="C/C++" scheme="http://example.com/tags/C-C/"/>
