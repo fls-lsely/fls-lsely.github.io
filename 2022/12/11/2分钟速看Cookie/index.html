@@ -20,17 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
+    <meta name="description" content="Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2分钟速看Cookie">
 <meta property="og:url" content="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/index.html">
 <meta property="og:site_name" content="lselyの博客">
-<meta property="og:description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
+<meta property="og:description" content="Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/267b6c72e15348f79c1443d47512f940.png#pic_center">
 <meta property="article:published_time" content="2022-12-11T14:02:46.000Z">
-<meta property="article:modified_time" content="2022-12-12T00:46:53.309Z">
+<meta property="article:modified_time" content="2022-12-12T07:27:03.412Z">
 <meta property="article:author" content="lsely">
 <meta property="article:tag" content="Web">
 <meta property="article:tag" content="前端">
@@ -97,7 +97,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-flag"><a href="/flag/" rel="section"><i class="fa fa-flag fa-fw"></i>Flag</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-flag"><a href="/flag/" rel="section"><i class="fa fa-flag fa-fw"></i>Flag</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a></li>
   </ul>
 </nav>
 
@@ -137,18 +137,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -202,6 +202,9 @@
         </h1>
 
         <div class="post-meta-container">
+
+	    
+
           <div class="post-meta">
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -216,7 +219,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-12 08:46:53" itemprop="dateModified" datetime="2022-12-12T08:46:53+08:00">2022-12-12</time>
+      <time title="修改时间：2022-12-12 15:27:03" itemprop="dateModified" datetime="2022-12-12T15:27:03+08:00">2022-12-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,8 +245,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><em>此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。</em></p>
-<h2 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h2><p>Cookie , 在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/cookie/1119">百度百科中的介绍</a>是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了，这个过程也就是登录。</p>
+        <h2 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h2><p>Cookie , 在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/cookie/1119">百度百科中的介绍</a>是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了，这个过程也就是登录。</p>
 <span id="more"></span>
 
 <p><img src="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center" alt="在这里插入图片描述"></p>
