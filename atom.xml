@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-11T09:58:41.980Z</updated>
+  <updated>2022-12-11T14:03:54.146Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,14 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Java 学习笔记</title>
-    <link href="http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/"/>
-    <id>http://example.com/2022/12/11/Java%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%202372099853a64865b128945de517dfb4/</id>
-    <published>2022-12-11T07:57:34.000Z</published>
-    <updated>2022-12-11T09:58:41.980Z</updated>
+    <title>2分钟速看Cookie</title>
+    <link href="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/"/>
+    <id>http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/</id>
+    <published>2022-12-11T14:02:46.000Z</published>
+    <updated>2022-12-11T14:03:54.146Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Java基础语法（面向过程）&quot;&gt;&lt;a href=&quot;#Java基础语法（面向过程）&quot; class=&quot;headerlink&quot; title=&quot;Java基础语法（面向过程）&quot;&gt;&lt;/a&gt;Java基础语法（面向过程）&lt;/h1&gt;&lt;p&gt;在学习面向对象之前，我们需要了解面向过程的编程思维，如果你学习过C语言和Python就会很轻松！&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;em&gt;此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Cookie是什么？&quot;&gt;&lt;a href=&quot;#Cookie是什么？&quot; class=&quot;headerlink&quot; title=&quot;Cookie是什么？&quot;&gt;&lt;/a&gt;Cookie是什么？&lt;/h2&gt;&lt;p&gt;Cookie , 在&lt;a href=&quot;https://baike.baidu.com/item/cookie/1119&quot;&gt;百度百科中的介绍&lt;/a&gt;是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了，这个过程也就是登录。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>上千字干货带你深入了解C/C++动态规划</title>
+    <link href="http://example.com/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <id>http://example.com/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</id>
+    <published>2022-12-11T13:58:52.000Z</published>
+    <updated>2022-12-11T14:01:21.209Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;提醒&lt;/strong&gt;：本文需读者具有以下C/C++基础：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; &lt;strong&gt;循环结构，数组&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;函数&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;递归&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     

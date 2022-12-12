@@ -20,25 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前进！不择手段的前进！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lselyの博客">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2分钟速看Cookie">
+<meta property="og:url" content="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/index.html">
 <meta property="og:site_name" content="lselyの博客">
-<meta property="og:description" content="前进！不择手段的前进！">
+<meta property="og:description" content="此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。 Cookie是什么？Cookie , 在百度百科中的介绍是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/267b6c72e15348f79c1443d47512f940.png#pic_center">
+<meta property="article:published_time" content="2022-12-11T14:02:46.000Z">
+<meta property="article:modified_time" content="2022-12-11T14:03:54.146Z">
 <meta property="article:author" content="lsely">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/","path":"2022/12/11/2分钟速看Cookie/","title":"2分钟速看Cookie"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>lselyの博客</title>
+<title>2分钟速看Cookie | lselyの博客</title>
   
 
 
@@ -74,7 +79,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">lselyの博客</h1>
+      <p class="site-title">lselyの博客</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">勤勤恳恳写代码，慵慵懒懒摆摆烂</p>
@@ -101,7 +106,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -114,6 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Cookie是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E7%9A%84%E5%8F%91%E9%80%81%E6%9C%BA%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">Cookie的发送机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">Cookie的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -150,16 +156,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -173,13 +180,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | lselyの博客">
+      <meta itemprop="name" content="2分钟速看Cookie | lselyの博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/" class="post-title-link" itemprop="url">2分钟速看Cookie</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          2分钟速看Cookie
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -203,17 +210,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><em>此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。</em></p>
+        <p><em>此文只是介绍Cookie一些基础知识和构成Cookie的组成部件，并不介绍用法。</em></p>
 <h2 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h2><p>Cookie , 在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/cookie/1119">百度百科中的介绍</a>是指”储存在用户本地终端上的数据”,用人话来说就类似于浏览器在本地的缓存，它是网站用来识别用户的一个文本。一般来说，在我们打开网站时，网站的Web服务器会为用户生成一个ID信息，可以说这就是用户的网络”身份证“，然后这个”身份证“就会保存到用户的电脑本地，以后如果用户再次登入这个网站，Web服务器就可以读取这个文本，就可以获取用户的各个信息了，这个过程也就是登录。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/12/11/2%E5%88%86%E9%92%9F%E9%80%9F%E7%9C%8BCookie/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/1f6dbf2dfa9a4275bbb2b974da336c1d.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="Cookie的发送机制"><a href="#Cookie的发送机制" class="headerlink" title="Cookie的发送机制"></a>Cookie的发送机制</h2><p>总体来说，每当我们第一次登录一个网站时，Web服务器就会发送一个Cookie到用户本地，在以后的登录中，用户本地的Cookie就会发送到Web服务器，从而验证自己的账户，用一张图来表示：<br><img src="https://img-blog.csdnimg.cn/267b6c72e15348f79c1443d47512f940.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="Cookie的组成"><a href="#Cookie的组成" class="headerlink" title="Cookie的组成"></a>Cookie的组成</h2><p>Cookie本质上还是一个文本数据，一般这个数据是经过加密的，由名称，值，还有几个用于控制Cookie使用范围或有效时间等量组成。</p>
+<ul>
+<li>名称和值 Name/Value：Cookie的名称以及值。</li>
+<li>有效期 Expires：Cookie的有效期。Expriers分为两种存储方式：会话性与持久性。会话性Cookie，保存在用户的内存中，会在推出浏览器时清空；而持久性Cookie会保存在用户的本地硬盘中，直至用户退出登录时才会失效 。说人话就是一个临时存储，一个长久存储。</li>
+<li>使用范围 Domain：Cookie的使用于访问范围。</li>
+<li>安全性 Secure：Cookie是否使用Https协议。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Cookie是网站用于识别用户身份，保存在用户本地上的数据（经过加密），由用户本地暂时或长久保存的文本数据，一般由名称，值，有效期，使用范围等组成。</p>
+
     </div>
 
     
@@ -221,93 +232,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/v2-4cfc15fe7744502c6102bf2695d828af_xl.jpg">
-      <meta itemprop="name" content="lsely">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lselyの博客">
-      <meta itemprop="description" content="前进！不择手段的前进！">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | lselyの博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">上千字干货带你深入了解C/C++动态规划</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-12-11 21:58:52 / 修改时间：22:01:21" itemprop="dateCreated datePublished" datetime="2022-12-11T21:58:52+08:00">2022-12-11</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>提醒</strong>：本文需读者具有以下C/C++基础：</p>
-<ol>
-<li> <strong>循环结构，数组</strong></li>
-<li> <strong>函数</strong></li>
-<li> <strong>递归</strong></li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/12/11/%E4%B8%8A%E5%8D%83%E5%AD%97%E5%B9%B2%E8%B4%A7%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3C-C-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="prev" title="上千字干货带你深入了解C/C++动态规划">
+                  <i class="fa fa-chevron-left"></i> 上千字干货带你深入了解C/C++动态规划
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
