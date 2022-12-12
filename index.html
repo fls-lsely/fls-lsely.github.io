@@ -89,7 +89,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-flag"><a href="/flag/" rel="section"><i class="fa fa-flag fa-fw"></i>Flag</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-flag"><a href="/flag/" rel="section"><i class="fa fa-flag fa-fw"></i>Flag</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
   </ul>
 </nav>
 
@@ -134,12 +134,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -200,7 +200,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-12-12 10:44:03 / 修改时间：11:58:10" itemprop="dateCreated datePublished" datetime="2022-12-12T10:44:03+08:00">2022-12-12</time>
+      <time title="创建时间：2022-12-12 10:44:03 / 修改时间：13:53:23" itemprop="dateCreated datePublished" datetime="2022-12-12T10:44:03+08:00">2022-12-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -213,10 +213,6 @@
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%90%8E%E7%AB%AF/Python/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a>
         </span>
     </span>
 
@@ -231,30 +227,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="什么是OCR？"><a href="#什么是OCR？" class="headerlink" title="什么是OCR？"></a>什么是OCR？</h2><p>OCR，全称Optical Character Recognition ，中文释义为光学字符识别，是指对一个包含文本信息的图片文件的识别，目前比较流行的OCR有tesseractOCR和cnOCR,在这篇文章中我们使用识别效果较好的tesseractOCR。</p>
-<h2 id="安装Tesseract-OCR和pytesseract"><a href="#安装Tesseract-OCR和pytesseract" class="headerlink" title="安装Tesseract-OCR和pytesseract"></a>安装Tesseract-OCR和pytesseract</h2><p>首先我们要安装tesseract，这两个网址任选其一即可：</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/UB-Mannheim/tesseract/wiki">Home · UB-Mannheim/tesseract Wiki (github.com)</a></p>
-<p><img src="https://img-blog.csdnimg.cn/50e98d9200344d199a3aae9882882a00.png#pic_center" alt="在这里插入图片描述"><br><a target="_blank" rel="noopener" href="https://digi.bib.uni-mannheim.de/tesseract/">Index of /tesseract</a><br><img src="https://img-blog.csdnimg.cn/0ed63f8f6c334377b5626f1ba9311c15.png" alt="在这里插入图片描述"><br>解释一下这些名称的含义，我们以最新版本v5.20举例：<br><img src="https://img-blog.csdnimg.cn/065bef0c830146759a57db2bc059d64b.png" alt="在这里插入图片描述"><br>w64的w是指Windows系统，64则是指电脑CPU采用64位处理技术，setup就是安装包，后面的版本号很好理解了。但是如果版本号后面跟上alpha，dev的话就是指这个安装包为开发版或是预览版，大多数程序的开发板大多不稳定，所以这里我们就是用最新的v5.2.0稳定版安装包。</p>
-<p>点击下载，下载完成后运行安装程序：<br><img src="https://img-blog.csdnimg.cn/9df01b5aaef04b3f8810340178f0fcdf.png" alt="在这里插入图片描述"><br>选择语言，没有中文，只好选英文。<br><img src="https://img-blog.csdnimg.cn/a724c137b8bf4ff7add2636dd4d0d324.png" alt="在这里插入图片描述"></p>
-<p>然后一直next，但是注意！在选择安装语言时这个Additional lauguage data千万不要全选，要不然下载过程特别慢，如果需要的话，只安装里面的 Chinese与English组件就行了。<br><img src="https://img-blog.csdnimg.cn/6af7bcaefe7d4ed0975d79d42e1ddcb7.png" alt="在这里插入图片描述"></p>
-<p>接下来就比较简单了，直接next，等待安装完成即可。</p>
-<p>安装完成后我们还得添加环境变量，打开自己安装tesseract的文件夹，复制路径：<br><img src="https://img-blog.csdnimg.cn/467da2d213a546aea5c0ee3969b84147.png" alt="在这里插入图片描述"></p>
-<p>回到桌面，右键此电脑：<img src="https://img-blog.csdnimg.cn/62c57fdb7128411eb81accfeb1e286bf.png" alt="在这里插入图片描述"><br>选择属性，点击高级系统设置，环境变量：<br><img src="https://img-blog.csdnimg.cn/7979035db073401da78813f5e15af752.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2974d89fca00404b840fead44a58aa5b.png" alt="在这里插入图片描述"></p>
-<p>打开环境变量，双击用户变量的Path，新建变量：<br><img src="https://img-blog.csdnimg.cn/220283b3a435480193f52034e39a704d.png" alt="在这里插入图片描述"></p>
-<p>把复制的路径粘贴进去，点确定，我们的环境配置就完成了。</p>
-<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><p>win+r，输入cmd，输入 tesseract -v 再回车，如果出现了tesseract的版本信息就说明配置成功了。<br><img src="https://img-blog.csdnimg.cn/617f8b7b0b3a4661b16667c7cc6e1b71.png" alt="在这里插入图片描述"></p>
-<p>为了在python中使用tesseract，我们需要安装pytesseract，直接在cmd中用pip安装就好了：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytesseract</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/7461946263b24a9cb8cb9231092a92e2.png#pic_center" alt="在这里插入图片描述"></p>
-<p>（无视里面的黄色字体，是我电脑的问题，对安装什么的没有影响）</p>
-<h2 id="实现自动识别文字"><a href="#实现自动识别文字" class="headerlink" title="实现自动识别文字"></a>实现自动识别文字</h2><p>打开python编辑器，把这段代码复制进去：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">pytesseract.pytesseract.tesseract_cmd = <span class="string">&#x27;D://Tesseract-OCR//tesseract.exe&#x27;</span>  <span class="comment"># 替换成你自己的tesseract安装路径</span></span><br><span class="line"></span><br><span class="line">text = pytesseract.image_to_string(Image.<span class="built_in">open</span>(<span class="string">&#x27;D://input.png&#x27;</span>))	<span class="comment"># 替换成要识别的图片路径</span></span><br><span class="line"><span class="built_in">print</span>(text)</span><br></pre></td></tr></table></figure>
-
-<p>用windows自带画图随便做个图：<br><img src="https://img-blog.csdnimg.cn/3bd4f66174874cd6840c336c7706ec5d.bmp#pic_center" alt="在这里插入图片描述"></p>
-<p>运行输出为 Hello world ，完美。</p>
-<p><img src="https://img-blog.csdnimg.cn/df96ff396b654f8cab20095e2d2d7e64.png" alt="在这里插入图片描述"></p>
-<p>怎么样，好玩吧？不仅这样，tesseract还可以识别中文！只不过得安装相应的库，这是下载链接：<br>    <a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata">https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata</a><br>下载下来中文训练包后，把包放到tessdata中就可以识别中文了。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/12/12/Python-Tesseract%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
